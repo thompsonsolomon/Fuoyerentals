@@ -1,0 +1,39 @@
+$theme-color: #ff5c41;
+$faded-color: #ff5e417c;
+
+$pure-white: #fff;
+$pure-black: #000;
+
+$faded-white: #f5f6f9;
+$faded2-white: #cccccc;
+$faded-black: rgba(0, 0, 0, 0.5);
+$faded-black2: rgba(0, 0, 0, 0.7);
+
+$theme-default1: #ff5c41;
+$theme-default2: #c44aaa;
+$theme-default3: #ff5c41;
+$theme-default4: #ff8c41;
+
+$white: #fff;
+$main-dark: #004fa5;
+$main: #0a6dd8;
+$main2: #3976ba;
+
+$main-light: #e4eefa;
+$main-alt: #d9e8f9;
+$grey: #fafafa;
+$grey-mid: #5c5c5c;
+$grey-dark: #2f2f2f;
+
+$theme-gradient1: linear-gradient(
+  to right,
+  $theme-default3 0%,
+  $theme-default4 51%,
+  $theme-default3 100%
+);
+$theme-gradient2: linear-gradient(
+  to right,
+  $theme-default1 0%,
+  $theme-default2 51%,
+  $theme-default4 100%
+);

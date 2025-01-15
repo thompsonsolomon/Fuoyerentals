@@ -1,0 +1,83 @@
+Here's an example of how you can structure your code in a try-catch block and export it as an external component from your `api.js` file:
+
+*api.js*
+```
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+const auth = firebase.auth();
+
+export const signInWithGoogle = async () => {
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await auth.signInWithPopup(provider);
+    return result.user;
+  } catch (error) {
+    console.error('Error signing in with Google:', error);
+    throw error;
+  }
+};
+
+export const signUpWithGoogle = async () => {
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await auth.signInWithPopup(provider);
+    return result.user;
+  } catch (error) {
+    console.error('Error signing up with Google:', error);
+    throw error;
+  }
+};
+
+export const getUserDetails = async () => {
+  try {
+    const user = auth.currentUser;
+    if (!user) {
+      throw new Error('No user logged in');
+    }
+    return {
+      displayName: user.displayName,
+      email: user.email,
+      emailVerified: user.emailVerified,
+      phoneNumber: user.phoneNumber,
+      photoURL: user.photoURL,
+      uid: user.uid,
+    };
+  } catch (error) {
+    console.error('Error getting user details:', error);
+    throw error;
+  }
+};
+```
+
+You can then import and use these functions in your sign-in or sign-up file like this:
+
+*signIn.js*
+```
+import { signInWithGoogle } from './api';
+
+const handleSignIn = async () => {
+  try {
+    const user = await signInWithGoogle();
+    console.log('Signed in user:', user);
+  } catch (error) {
+    console.error('Error signing in:', error);
+  }
+};
+```
+
+*signUp.js*
+```
+import { signUpWithGoogle } from './api';
+
+const handleSignUp = async () => {
+  try {
+    const user = await signUpWithGoogle();
+    console.log('Signed up user:', user);
+  } catch (error) {
+    console.error('Error signing up:', error);
+  }
+};
+```
+
+Remember to handle errors and exceptions properly in your application.

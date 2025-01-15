@@ -1,0 +1,185 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+.SingleProContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  .single-title {
+    padding: 30px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+    box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    .sindleCon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 5px;
+      .left-single {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        h2 {
+          text-transform: capitalize;
+          color: #1c2d3a;
+          font-weight: 600;
+          margin: 0;
+        }
+        .label {
+          border-radius: 5px;
+          padding: 4px 15px;
+          font-family: Roboto, sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          color: #ffffff;
+          display: inline-block;
+          text-transform: capitalize;
+          background-color: #f13439;
+          -webkit-box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+          box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+        }
+        ul {
+          padding: 0;
+          display: flex;
+          li {
+            margin: 5px 10px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: $pure-black;
+            svg {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      .right-single {
+        .rating {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2px;
+          padding-bottom: 2px;
+          svg {
+            color: #ffcc33;
+            font-size: 20px;
+          }
+        }
+        h2 {
+          color: $theme-color;
+          font-weight: 700;
+        }
+        .feature-label {
+          span {
+            border: 1px dashed #d2d2d2;
+            color: #1c2d3a;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  .single-body {
+    padding: 30px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+    box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+    .head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $theme-color;
+        text-transform: capitalize;
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      li {
+        display: block;
+        line-height: 2;
+        font-weight: 500;
+        color: rgba(88, 97, 103, 0.85);
+        span {
+          font-weight: 600;
+          min-width: 140px;
+          display: inline-block;
+          color: #586167;
+        }
+      }
+    }
+    .attach-file {
+      color: #444444;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+
+.singlPropImage{
+  height: 53dvh;
+}
+
+.buyNowButtonCon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+
+  button{
+    padding: 15px 48px
+  }
+}
+
+
+
+
+.imageConAlll{
+  position: relative;
+  .returnButton{
+    position: absolute;
+    top: 2;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 30px;
+
+    button{
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      margin-left: 30px;
+      
+    }
+  }
+
+}

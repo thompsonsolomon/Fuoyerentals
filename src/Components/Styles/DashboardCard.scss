@@ -1,0 +1,193 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+.DashboardProperties {
+  border: none;
+  -webkit-box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+  box-shadow: 3.346px 3.716px 22.5px rgb(0 0 0 / 7%);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+
+  @include respond(responsive) {
+    height: fit-content;
+    }
+
+  .card-body {
+    padding: 30px;
+    .media {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 4px;
+      img {
+        width: 12%;
+      }
+      .media-body {
+        margin-left: 20px;
+        h4 {
+          font-weight: 500;
+          line-height: 1.2;
+        }
+        h6 {
+          font-weight: 400;
+          color: rgba(88, 97, 103, 0.7);
+        }
+      }
+      .arrow-animated {
+        margin-left: auto;
+        color: $theme-color;
+        svg {
+          width: 16px;
+          height: 16px;
+          vertical-align: middle;
+          -webkit-animation: Arrowanimation 3s ease-in-out infinite;
+          animation: Arrowanimation 3s ease-in-out infinite;
+        }
+      }
+      @keyframes Arrowanimation {
+        0% {
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+          -webkit-transition: 0.8s;
+          transition: 0.8s;
+        }
+        75% {
+          -webkit-transform: translate(5px, 0);
+          transform: translate(5px, 0);
+          -webkit-transition: 0.8s;
+          transition: 0.8s;
+        }
+        100% {
+          -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+          -webkit-transition: 0.8s;
+          transition: 0.8s;
+        }
+      }
+    }
+    .light-box {
+      border-radius: 5px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #878787;
+      margin-top: 10px;
+      border-radius: 5px;
+
+      @include respond(responsive) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      li {
+        width: 100%;
+        display: flex;
+        svg {
+          font-size: 1.45rem;
+          margin-right: 5px;
+        }
+        h5 {
+          font-weight: 500;
+          font-size: 1.25rem;
+          line-height: 1.2;
+          margin: 0;
+        }
+        .light-font {
+          font-size: 14px;
+          color: white;
+        }
+      }
+      li + li {
+        border-left: 1px solid #dee2e6;
+        padding-left: 20px;
+      }
+    }
+  }
+  .calculations {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+      li {
+        width: 100%;
+        text-align: left;
+        .font-success {
+          color: #89c826 !important;
+        }
+        .light-font {
+          color: rgba(88, 97, 103, 0.7);
+        }
+        .font-danger {
+          color: #f13439;
+        }
+      }
+    }
+    li + li {
+      padding-left: 20px;
+      margin-left: 10px;
+      border-left: 1px solid #dee2e6;
+    }
+  }
+  .labelCon {
+    display: flex;
+    justify-content: space-between ;
+    align-items: flex-start;
+    margin-top: 40px;
+    width: 100%;
+    .label {
+      border-radius: 5px;
+      padding: 4px 0;
+      font-family: Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: $theme-color;
+      display: inline-block;
+      text-transform: capitalize;
+      svg {
+        margin-right: 5px;
+      }
+    }
+    .arrow-animated {
+      margin-left: auto;
+      color: $theme-color;
+      svg {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        -webkit-animation: Arrowanimation 3s ease-in-out infinite;
+        animation: Arrowanimation 3s ease-in-out infinite;
+      }
+    }
+    @keyframes Arrowanimation {
+      0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+      }
+      75% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0);
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+      }
+      100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+      }
+    }
+  }
+}

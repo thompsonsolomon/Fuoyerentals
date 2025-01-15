@@ -1,0 +1,165 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+.Offer_Container {
+  padding: 90px 0;
+  position: relative;
+  z-index: 1;
+  background-image: url(../../assets/images/main/banner1.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include respond(responsive) {
+    .row {
+      flex-direction: column;
+      .media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center !important;
+        .media-body {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .title-1 {
+    padding-bottom: 50px;
+    text-align: center;
+    .label-gradient {
+      background-image: $theme-gradient2;
+      border-radius: 5px;
+      padding: 4px 15px 3px;
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #ffffff;
+      display: inline-block;
+      text-transform: capitalize;
+    }
+    h2 {
+      padding-top: 15px;
+      line-height: 1.3;
+      text-transform: capitalize;
+      font-weight: 700;
+      color: $pure-white;
+    }
+    hr {
+      color: $theme-color;
+      width: 80px;
+      margin: 20px auto 0;
+      padding: 5px;
+      opacity: 1;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .offer-box {
+      display: flex;
+      align-items: center;
+
+      .offer-wrapper {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 4px;
+        .media {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          .media-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            position: relative;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.1);
+            svg {
+              display: block;
+              font-size: 40px;
+              color: $pure-white;
+            }
+            &::before {
+              background-image: $theme-gradient1;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              vertical-align: middle;
+              width: 88%;
+              height: 88%;
+              -webkit-transform: scale(0);
+              transform: scale(0);
+              // background-image: var(--theme-gradient1);
+              border-radius: 100%;
+              z-index: -1;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              border-radius: 50%;
+              border: 1px dashed #ffffff;
+              padding: 10px;
+              -webkit-transition: 0.8s;
+              transition: 0.8s;
+              -webkit-animation: spin 10s infinite linear;
+              animation: spin 10s infinite linear;
+            }
+          }
+          .media-body {
+            margin-left: 20px;
+            flex: 1;
+            color: $pure-white;
+            h6 {
+              color: $pure-white;
+              letter-spacing: 5px;
+              line-height: 1.8;
+              text-transform: uppercase;
+              position: relative;
+              margin-bottom: 0;
+              font-weight: 500;
+              &::after {
+                position: absolute;
+                content: "";
+                width: 100px;
+                left: 60px;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.1);
+              }
+            }
+            h3 {
+              color: $pure-white;
+              font-weight: 700;
+              margin: 16px 0;
+              font-size: 25px;
+              letter-spacing: 0.03em;
+              line-height: 1.2;
+            }
+            p {
+              line-height: 1.7;
+              margin-bottom: 0;
+              color: $pure-white;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

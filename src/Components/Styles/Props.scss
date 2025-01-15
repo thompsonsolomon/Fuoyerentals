@@ -1,0 +1,98 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+.property-box {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  width: 250px;
+  background-color: white;
+  box-shadow: 3px 6px 9px #666;
+  @include respond(responsive) {
+    width: 100%;
+  }
+  .property-image {
+    position: relative;
+    // height: 200px;
+    img {
+      // width: 100%;
+      height: 150px;
+      width:250px;
+    }
+    .type {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      margin: 0 auto;
+      span {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        background-image: $theme-gradient1;
+        border-radius: 5px;
+        padding: 4px 15px 3px;
+        display: inline-block;
+        color: $pure-white;
+        -webkit-box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+        box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+      }
+    }
+  }
+  .property-detais {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    .card-text {
+      background-color: $main-alt;
+      color: $grey-dark;
+      padding: 5px 1px;
+      text-align: left;
+      margin-top: 3px;
+      width: 100%;
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+    .status-price_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      // gap: 30px;
+      padding: 9px 3px;
+
+      .TextCon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .status,
+        .price {
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: 600;
+          background-image: $theme-gradient1;
+          border-radius: 5px;
+          padding: 4px 15px 3px;
+          display: inline-block;
+          color: $pure-white;
+          -webkit-box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+          box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+        }
+      }
+      .IconCOn {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          a {
+            color: $theme-default3;
+          }
+        }
+      }
+    }
+  }
+}

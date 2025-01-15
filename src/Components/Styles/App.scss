@@ -1,0 +1,130 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Centra", sans-serif !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none !important;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  outline: none;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.push {
+  height: 40px;
+  width: 100%;
+}
+.container {
+  width: 80%;
+
+  @include respond(responsive) {
+    width: 95%;
+  }
+}
+.d-n {
+  display: none;
+}
+
+.container-fluid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Works for Chrome, Edge, and Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Transitions the background color over 5000s */
+  transition: background-color 5000s;
+  /* Changes text color to black */
+  -webkit-text-fill-color: #fff !important;
+  /* Adds a 1px black border and removes the outline */
+  outline: none;
+}
+
+/* Works for Firefox */
+input:-moz-autofill {
+  /* Changes text color to black */
+  -moz-text-fill-color: #fff !important;
+  /* Adds a 1px black border and removes the outline */
+  outline: none;
+}
+.btn {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  background-image: $theme-gradient1;
+  border-radius: 5px;
+  padding: 4px 15px 3px;
+  display: inline-block;
+  color: $pure-white;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+  box-shadow: 0 0 9px 3px rgb(241 52 57 / 20%);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+
+.button2{
+  padding:10px 18px;
+  margin-bottom: 20px;
+}
+
+.swal2-popup{
+  font-size: 14px;
+}
+.swal2-title{
+  font-size: 16px;
+}
+.swal2-icon{
+  width: 50px;
+  height: 50px;
+}

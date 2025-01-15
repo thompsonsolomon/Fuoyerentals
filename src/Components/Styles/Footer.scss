@@ -1,0 +1,76 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+footer {
+  background-color: $pure-black;
+  padding: 80px 0;
+  color: white;
+  .foot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include respond(responsive) {
+      justify-content: flex-start;
+    }
+
+    .foot-col {
+      max-width: 250px;
+      text-align: left;
+
+      .footer-links {
+        .footer_logo {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          svg {
+            font-size: 36px;
+            font-weight: 700;
+            color: $pure-white;
+          }
+          span {
+            font-size: 25px;
+            font-weight: 700;
+            color: $pure-white;
+            padding-left: 8px;
+            text-transform: uppercase;
+          }
+
+          @include respond(responsive) {
+            svg {
+              font-size: 26px;
+            }
+            span {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .footer-content {
+          p {
+            font-size: 14px;
+            color: #d2d2d2;
+            line-height: 1.6;
+          }
+          li {
+            font-size: 14px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            a {
+              line-height: 1.6;
+              color: $pure-white !important;
+              font-weight: 500;
+              font-size: 18px;
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

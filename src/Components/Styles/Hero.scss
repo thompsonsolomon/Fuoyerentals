@@ -1,0 +1,61 @@
+@import "../UI/Responsive.scss";
+@import "../UI/Theme.scss";
+.heroPage {
+  background-image: unset;
+  background-color: $faded-black;
+  background-blend-mode: overlay;
+  padding: 0;
+  height: calc(100dvh - 50px);
+  color: $pure-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .heroWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    @include respond(responsive) {
+      gap: 15px;
+      width: 100%;
+    }
+    h2 {
+      font-size: 40px;
+      color: $pure-white;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 2px;
+      @include respond(responsive) {
+        font-size: 35px;
+      }
+    }
+    p {
+      line-height: 1.3;
+    }
+    button {
+      background-color: transparent;
+      border: 1px solid $theme-color;
+      outline: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      color: $pure-white;
+      width: fit-content;
+    }
+    .stay {
+      display: block;
+    }
+    .learnM {
+      display: none;
+    }
+    @include respond(responsive) {
+      .stay {
+        display: none;
+      }
+      .learnM {
+        display: block;
+      }
+    }
+  }
+}
